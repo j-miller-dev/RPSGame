@@ -20,9 +20,9 @@
     <div class="container">
       <header>
         <h1>
-          <span class="btn-circle">Rock</span>
-          <span class="btn-circle">Paper</span>
-          <span class="btn-circle">Scissors</span>
+          <span>Rock</span>
+          <span>Paper</span>
+          <span>Scissors</span>
         </h1>
         <div class="score-container">
           <h4>score</h4>
@@ -30,15 +30,55 @@
         </div>
       </header>
 
-      <main>
-        <button><img src="./images/icon-paper.svg" alt="paper icon" /></button>
-        <button>
-          <img src="./images/icon-scissors.svg" alt="scissors icon" />
+      <main id="main">
+        <button class="btn-circle btn-paper pick" data-choice="paper">
+          <span class="wrapper">
+            <img src="./images/icon-paper.svg" alt="paper icon"
+          /></span>
         </button>
-        <button><img src="./images/icon-rock.svg" alt="rock icon" /></button>
+        <button class="btn-circle btn-scissors pick" data-choice="scissors">
+          <span class="wrapper">
+            <img src="./images/icon-scissors.svg" alt="scissors icon" />
+          </span>
+        </button>
+        <button class="btn-circle btn-rock pick" data-choice="rock">
+          <span class="wrapper">
+            <img src="./images/icon-rock.svg" alt="rock icon" />
+          </span>
+        </button>
       </main>
 
-      <button class="btn-rules">Rules</button>
+      <div class="rules-modal" id="modal">
+        <img src="./images/image-rules.svg" alt="rules" />
+        <button id="close">
+          <img src="./images/icon-close.svg" alt="close" />
+        </button>
+      </div>
+
+      <button class="btn-rules" id="open">Rules</button>
+    </div>
+
+    <div class="selection" id="selection">
+      <div>
+        <h2>You picked</h2>
+        <button class="btn-circle btn-paper" id="user_select">
+          <span class="wrapper">
+            <img src="./images/icon-paper.svg" alt="paper icon"
+          /></span>
+        </button>
+      </div>
+      <div class="go-down">
+        <p class="big-text">You <span id="winner"></span></p>
+        <button class="btn" id="reset">Play again</button>
+      </div>
+      <div>
+        <h2>The House picked</h2>
+        <button class="btn-circle btn-rock" id="computer_select">
+          <span class="wrapper">
+            <img src="./images/icon-rock.svg" alt="rock icon" />
+          </span>
+        </button>
+      </div>
     </div>
   </body>
 </html>
